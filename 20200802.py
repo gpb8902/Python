@@ -11,32 +11,3 @@ sentence3 = """
 호박고구마에요
 """
 print(sentence3)
-
-jumin = "000000-111111"
-
-print("성별 : " + jumin[7])
-print("연 : " + jumin[0:2])
-print("월 : "+ jumin[2:4])
-print("일 : " + jumin[4:6])
-print("생년월일 : " + jumin[:6])
-print("출생지혁조합번호 : " + jumin[8:12])
-print("출생지역의 같은 성씨 출생 신고순번 : " + jumin[12])
-print("오류검증번호 : " + jumin[13])
-
-python = "Python is Amazing"
-print(python.lower())
-print(python.upper())
-print(python[0].isupper())
-print(len(python))
-print(python.replace("Python", "Minecraft"))
-
-index = python.index("n")
-print(index)
-index = python.index("n", index +1)
-print(index)
-
-print(python.find("Java"))
-#print(pythonindex("Java"))
-print("hi")
-
-print(python.count("n"))
