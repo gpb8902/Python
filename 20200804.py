@@ -1,0 +1,15 @@
+print("I'm a Korean, and I can speak %d of languages like Spanish, Korean, Arab, Chinese, English, and Portuguese, Bengal , French, German, Maori, Mongolian, Russian, Turkish, and Vietnamese." % 50)
+print("And I study them %s" % "myself")
+print("My favorite game is %s" %"Minecraft")
+print("Apple 은 %c로 시작해요" % "A")
+print("España empieza con una %c" %"E")
+print("나는 {}살 입니다.".format(1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000))
+print("저는 %s색과 %s색을 좋아해요." %("파란", "다이아몬드"))
+print("나는 {}와 {}과목을 좋아해요.".format("영어", "수학"))
+print("나는 {0}와 {1}과목을 좋아해요.".format("영어", "수학"))
+print("나는 {1}과 {0}과목을 좋아해요.".format("영어", "수학"))
+
+print("나는 {age}살이며, {game}와 {game1}를 좋아합니다.".format (age = 5435, game = 1, game1 = 2))
+#print("나는 {age}살이며, {color}색을 좋아해요."format(color="빨간", age=20))
+
+#print("나는 {age}살이며, {game1}와 {game2}를 좋아해요.".format(age = 14, game1="마인크래프트", game2="카트라이더"))
