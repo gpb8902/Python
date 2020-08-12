@@ -16,7 +16,7 @@ print('남자' == '여자')
 print('이등병' == '이등병')
 
 
-banana = 7 #banana라는 변수가 7이랑 같다. 
+banana = 7 #banana라는 변수가 7로 지정한다.
 
 print(banana == 7) #변수는 따옴표를 붙이지 않고, banana라는 변수는 7과 같기 때문에 True라고 출력된다.
 
