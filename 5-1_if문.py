@@ -8,7 +8,7 @@ else:
 
 temp = int(input("AI : 기온은 어때요?"))
 if 30 <= temp:
-    print("(AI가" + temp + "C의 온도로 집 안을 맞춰 놓아서 덥다.)")
+    print("(AI가" + int(temp) + "C의 온도로 집 안을 맞춰 놓아서 덥다.)")
 elif 10 <= temp and temp < 30:
     print("(AI가 드디어 제일을 하나 싶었지만, -2배온도로 해가지고 얼어 죽을 것 같다.)")
 else:
