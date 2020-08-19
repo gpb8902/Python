@@ -1,9 +1,35 @@
-from random import*
-right = ["당신은 애국자!!!","(He or She) is the perfect Korean among those I have seen so far.", "아닛!!! 혹시 SKY를 뛰어넘어 하버드대 한국역사학과(있는지는 모르겠다.) 출신인가요?", "Muchim Doraji:Is He or She smartest Korean? \n 아 네 Muchim Doraji님께서 문자 보내주었습니다.", "대대손손 애국자의 혈흔이 느껴집니다."]
-wrong = ["와... 실망입니다.", "Muchim Gaji: Is He or She Chinese?\n 아 네, Muchim Gaji님께서 실망이 크셨나봐요.", "뛰어난 친일력!!!", "진정한 을사오적 혈통이군요!!", ""]
+from random import *
+def quiz_right():
+    right = randrange(1,6)
+    if right == 1:
+        print("당신은 애국자!!!")
+    elif right == 2:
+        print("(He or She) is the perfect Korean among those I have seen so far.")
+    elif right == 3:
+        print("아닛!!! 혹시 SKY를 뛰어넘어 하버드대 한국역사학과(있는지는 모르겠다.) 출신인가요?")
+    elif right == 4:
+        print("Muchim Doraji:Is He or She the smartest Korean? \n아 네 Muchim Doraji님께서 문자 보내주었습니다.")
+    elif right == 5:
+        print("대대손손 애국자의 혈흔이 느껴집니다.")
+
+
+def quiz_wrong():
+    wrong = randrange(1,6)
+    if wrong == 1:
+        print("와... 실망입니다.")
+    elif wrong == 2:
+        print("Muchim Gaji: Is He or She Chinese?\n 아 네, Muchim Gaji님께서 실망이 크셨나봐요.")
+    elif wrong == 3:
+        print("뛰어난 친일력!!!")
+    elif wrong == 4:
+        print("진정한 을사오적 혈통이군요!!")
+    elif wrong == 5:
+        print("(He or She) is the perfect Japanese among those I have seen so far.")
+
+wrong = ["", "", "", "", ""]
 
 print("---------------------------------------------------------------------------")
-print("안녕하십니까? 저는 광복절 퀴즈를 진행할 사회자 사. 회. 자 입니다. \n당신은 애국자 Lv.0입니다. 답은 1,2,3...으로 번호만 작성해 주세요. 문제 나갑니다!")
+print("안녕하십니까? 저는 광복절 퀴즈를 진행할 사회자 사. 회. 자 입니다. \n답은 1,2,3...으로 번호만 작성해 주세요. 문제 나갑니다!")
 print("---------------------------------------------------------------------------")
 ans = input(""" 
 1번 문제!!
@@ -18,8 +44,7 @@ ans = input("""
 
 if "3" == ans:  #정답 3번이 맞을 때
     print("---------------------------------------------------------------------------")
-    def open_account():
-    print()
+    quiz_right()
     print("---------------------------------------------------------------------------")
     ans = input("""
 2번 문제!!
@@ -32,8 +57,7 @@ if "3" == ans:  #정답 3번이 맞을 때
 → """)  #2번 문제로 넘어감
     if "2" == ans:  #2번문제 정답2 맞출때
         print("---------------------------------------------------------------------------")
-        def open_account():
-        print()
+        quiz_right()
         print("---------------------------------------------------------------------------")
         ans = input("""
 3번 문제!! 다음의 편지를 읽고
@@ -52,8 +76,7 @@ if "3" == ans:  #정답 3번이 맞을 때
 → """)
         if ans == "1": #3번문제 정답1 맞출때
             print("---------------------------------------------------------------------------")
-            def open_account():
-            print()
+            quiz_right()
             print("---------------------------------------------------------------------------")
             ans = input("""
 4번 문제!!
@@ -65,8 +88,7 @@ if "3" == ans:  #정답 3번이 맞을 때
 → """)  #4번에 2번
             if ans == "2":  #4번문제 정답 2맞출 때
                 print("---------------------------------------------------------------------------")
-                def open_account():
-                print()
+                quiz_right()
                 print("---------------------------------------------------------------------------")
                 ans = input("""
 5번 문제!!
@@ -80,8 +102,7 @@ if "3" == ans:  #정답 3번이 맞을 때
 →""")
                 if ans == "4":  #5번문제 정답 4맞출 때
                     print("---------------------------------------------------------------------------")
-                    def open_account():
-                    print()
+                    quiz_right()
                     print("---------------------------------------------------------------------------")
                     ans = input("""
 6번 문제!!
@@ -96,33 +117,24 @@ if "3" == ans:  #정답 3번이 맞을 때
 4번: 다람이근육질
 5번: 대한독립만세
 → """)  #6번에 5번
-                    if ans =="5" #6번문제가 5일때
-                    def open_account():
-                    print()
+                    if ans =="5": #6번문제가 5일때
+                        quiz_right()
                     
                     else:#6번 문제가 틀렸을 때
-                    def open_account():
-                    print()
+                                quiz_wrong()
 
                 else: #5번 문제가 틀렸을 때
-                            def open_account():
-                            print()
-
+                            quiz_wrong()
 
             else:#4번 문제가 틀렸을 때
-                    def open_account():
-                    print()
+                    quiz_wrong()
 
         else:   #3번 문제가 틀렸을 때
-            def open_account():
-             print()
+            quiz_wrong()
     
     else:  #2번 문제가 틀렸을 때
-        def open_account():
-        print()
+       quiz_wrong()
 
 else:  #1번 문제가 틀렸을 때
-    def open_account():
-    print()
+    quiz_wrong()
 
-open_account
