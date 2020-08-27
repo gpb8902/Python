@@ -13,13 +13,13 @@ print(java.intersection(python)) #유재석이 출력된다.
 print(java | python) #java, python이 같이 출력된다.(|는 \키와 Shift키를 동시에 누르면 나온다)
 print(java.union(python)) ##java, python이 같이 출력된다
  
-print(java - python) #java에서 python을 뺀다(java랑 겹치는 사람만 뺌)
-print(java.difference(python)) #
-print(python - java) #
-print(python.difference(java)) #
+print(java - python) #java에서 python을 뺀(java랑 겹치는 사람만 뺌)값을 출력한다
+print(java.difference(python)) #java에서 python을 뺀(java랑 겹치는 사람만 뺌)값을 출력한다
+print(python - java) #python에서 java을 뺀(python랑 겹치는 사람만 뺌)값을 출력한다
+print(python.difference(java)) #python에서 java을 뺀(python랑 겹치는 사람만 뺌)값을 출력한다
 
-python.add("양세형", "하하") #
-print(python) #
+python.add("양세형", "하하") #python에 양세형, 하하가 추가된다
+print(python) #유재석, 김종국, 양세형, 하하가 출력된다
 
-java.remove("하하") #
-print(java) #
+java.remove("하하") #java에서 하하가 제거된다
+print(java) #유재석, 양세형, 하도권이 출력된다
