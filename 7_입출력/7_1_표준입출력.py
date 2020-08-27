@@ -1,2 +1,8 @@
-# Python
- 
+print("Python", "Java", sep=",")
+print("Python", "Java", sep="+")
+print("Python", "Java", sep=" vs ")
+print("Python", "Java", "JavaScript", sep=" vs ")
+print("Python", "Java", sep=", ", end="? ")
+print("Which programing is funnier, Python or Java?")
+print("Python", "Java", sep=", ")
+print("Which programing is funnier, Python or Java?")
