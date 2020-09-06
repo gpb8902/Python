@@ -1,9 +1,18 @@
-import time
+from datetime import datetime
+now = datetime.now()
 
-def receipt():  #영수증 발급을 위한 함수
-    receipt = open("receipt.txt", "r", encoding="utf8")
-    print("현 잔액 : ", file=receipt)
-    print("가격 : ", file=receipt)
+def receipt(menuName, price, afterMoney):  #영수증 발급을 위한 함수
+    receipt = open("receipt.txt", "w", encoding="utf8")
+    print("로켓음식배달에서 결제하셨습니다.", file=receipt)
+    print("%s년 %s월 %s일 %s시 %s분 %s초" %(now.year, now.month, now.day, now.hour, now.minute, now.second), file=receipt)
+    print("", file=receipt)
+    print("", file=receipt)
+    print("식당명 : 도미니카공화국피자", file=receipt)
+    print("", file=receipt)
+    print("", file=receipt)
+    print("메뉴명 : " + str(menuName), file=receipt)
+    print("지불액 : " + str(price), file=receipt)
+    print("잔  액 : " + str(afterMoney), file=receipt)
     receipt.close()
 
 def line(): #줄을 표현하기 위한 함수
@@ -12,7 +21,8 @@ def line(): #줄을 표현하기 위한 함수
 def purchase(menuName, price): #돈 계산을 위한 함수
     if int(money) >= int(price):    #돈이 가격보다 많거나 같으면
         print("주문이 완료되었습니다. 현재 남은잔액은 {0} 입니다.".format(int(money)-int(price)))   #주문 성공!
-        return int(money)-int(price)
+        baMoney = int(money)-int(price)
+        receipt(menuName=str(menuName), price=str(price), afterMoney=str(baMoney))
     else:   #돈이 가격보다 적을경우
         print("잔액이 부족합니다. 현재 남은잔액은 {0} 입니다.".format(int(money)))
         charge = input("카드에 돈을 충전하시겠어요? (Y/N) ")
