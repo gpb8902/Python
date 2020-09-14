@@ -17,3 +17,5 @@ except ValueError:
 except BigNumberError as err:
     print("에러가 발생하였습니다. 한 자리 수만 입력 할 수 있습니다.")
     print(err)
+finally:
+    print("계산기를 이용해 주셔서 감사합니다.")
