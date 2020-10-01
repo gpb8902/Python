@@ -34,13 +34,14 @@ while running:
             running = False
 
         if event.type == pygame.KEYDOWN:
-            if event.key == K_LEFT:
+            if event.key == pygame.K_LEFT:
                 to_x -= 5
             elif event.key == pygame.K_RIGHT:
                 to_x += 5
             elif event.key == pygame.K_UP:
-                to_y -= 5
-                to_y += 5
+                to_y -= 10
+            elif event.key == pygame.K_DOWN:
+                to_y += 10
             
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
@@ -51,7 +52,17 @@ while running:
 
         character1_x_pos += to_x
         character1_y_pos += to_y
+
+        if character1_x_pos <0:
+            character1_x_pos = 0
+        elif character1_x_pos > screen_width - character1_width:
+            character1_x_pos = screen_width - character1_width           
             
+        if character1_y_pos <0:
+            character1_y_pos = 0
+        elif character1_y_pos > screen_width - character1_height:
+            character1_y_pos = screen_width - character1_height
+
     screen.blit(background, (0, 0))
 
     screen.blit(character, (character_x_pos, character_y_pos))
